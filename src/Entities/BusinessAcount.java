@@ -22,6 +22,14 @@ public class BusinessAcount extends Account {
 	}
 	
 	public void loan(Double amount) {
-		balance += amount;
+		if(amount <= loanLimit) {
+		balance += amount - 10;
+		}
+	}
+	
+	@Override
+	public final void Withdraw(Double amount) {
+		super.Withdraw(amount);
+		balance -= amount - 2.0;
 	}
 }

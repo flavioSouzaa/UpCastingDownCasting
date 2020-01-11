@@ -9,7 +9,7 @@ public class Program {
 	public static void main(String[] args) {
 		
 		Account acc = new Account(1001, "alex", 1000.0);
-		BusinessAcount bcc = new BusinessAcount(1023, "maria", 0.0, 100.00);
+		BusinessAcount bcc = new BusinessAcount(1023, "maria", 1000.0, 500.00);
 	
 		//UpCasting
 		Account acc1 = bcc;
@@ -34,7 +34,7 @@ public class Program {
 		if(acc3 instanceof SavingsAccount) {
 			SavingsAccount acc5 = (SavingsAccount)acc3;
 			acc5.UpdateBalance(100.00);
-			System.out.println("Update");
+			//System.out.println("Update");
 		}
 		
 		acc.Withdraw(200.00);
@@ -42,6 +42,9 @@ public class Program {
 		
 		acc3.Withdraw(200.0);
 		System.out.println(acc3.getBalance());
+		
+		bcc.Withdraw(200.0);
+		System.out.println(bcc.getBalance());
 	}
 
 }
