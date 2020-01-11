@@ -8,13 +8,13 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Account acc = new Account(1001, "alex", 0.0);
+		Account acc = new Account(1001, "alex", 1000.0);
 		BusinessAcount bcc = new BusinessAcount(1023, "maria", 0.0, 100.00);
 	
 		//UpCasting
 		Account acc1 = bcc;
 		Account acc2 = new BusinessAcount(102, "paulo", 50.00, 200.00);
-		Account acc3 = new SavingsAccount(1209, "diogo", 100.00, 0.32);
+		Account acc3 = new SavingsAccount(1209, "diogo", 1000.00, 0.01);
 	
 	
 		//DownCasting
@@ -36,6 +36,12 @@ public class Program {
 			acc5.UpdateBalance(100.00);
 			System.out.println("Update");
 		}
+		
+		acc.Withdraw(200.00);
+		System.out.println(acc.getBalance());
+		
+		acc3.Withdraw(200.0);
+		System.out.println(acc3.getBalance());
 	}
 
 }
